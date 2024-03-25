@@ -43,6 +43,9 @@ if [ "$IS_PUBLIC" = true ]; then
     git config --global pull.rebase false
     git pull origin "$GIT_BRANCH" || display_error "Failed to clone the repository"
 else
+    if [ -z "$GIT_TOKEN" ]; then
+        display_error "GIT_TOKEN is required when IS_PUBLIC is false"
+fi
     GIT_REPO=$(echo "$GIT_REPO" | sed -e 's~^https://~~')
     git init
     git remote add origin "https://$GIT_USERNAME:$GIT_TOKEN@$GIT_REPO"
