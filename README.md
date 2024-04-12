@@ -16,7 +16,7 @@ This script automates the process of customizing the startup for your projects b
     ```bash
     git clone https://github.com/JarsScript/docker-run.git
     ```
-    or donwload the **docker-run.sh** file and add it to your root.
+    or download the **docker-run.sh** file and add it to your root.
 
 3. Open the `docker-run.sh` file in your preferred text editor.
 
