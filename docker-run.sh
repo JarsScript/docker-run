@@ -74,6 +74,7 @@ elif [ "$EGG" = "python" ]; then
     python "$PYTHON_SCRIPT"
     else
     display_error "Python script not found: $PYTHON_SCRIPT"
+    fi
 else
     display_error "Invalid value for EGG: $EGG. Supported values are 'node.js' and 'python'"
 fi
